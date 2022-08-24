@@ -236,6 +236,7 @@
                                 <img src="images/back.jpg" alt="">
                             </li>
                         </ul>
+                        
                     </div>
                     <div>
                         <div class="product_right_first_top">
@@ -282,23 +283,33 @@
                         <div class="current_choose">
                             Djuparp dark green
                         </div>
-                        <ul class="variants">
-                            <li class="active">
-                                <img src="images/preview.jpg" alt="">
-                            </li>
-                            <li>
-                                <img src="images/white.jpg" alt="">
-                            </li>
-                            <li>
-                                <img src="images/green.jpg" alt="">
-                            </li>
-                            <li>
-                                <img src="images/light.jpg" alt="">
-                            </li>
-                            <li>
-                                <img src="images/back.jpg" alt="">
-                            </li>
-                        </ul>
+                        <div class="ar_variants">
+                            <ul class="variants">
+                                <li class="active">
+                                    <img src="images/preview.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="images/white.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="images/green.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="images/light.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="images/back.jpg" alt="">
+                                </li>
+                            </ul>
+                            <div class="webComponent">
+                                <ar-viewer 
+                                    GLB-src="https://ikea-ar-atlasiko.surge.sh/sophieArmchair/sophieArmchair.glb" 
+                                    USDZ-src="https://ikea-ar-atlasiko.surge.sh/sophieArmchair/sophieArmchair.usdz#&amp;customHeight=medium" 
+                                    custom-banner="https://ikea-ar-atlasiko.surge.sh/sophieArmchair/banner.html">
+                                </ar-viewer>
+                                <a href="https://atlasiko.com/express-contact-us.html?src=ar-demo-ikea" class="btn">Get a<br> quote</a>
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <div class="block_title">How to get it</div>
@@ -358,6 +369,7 @@
             </div>
         </div>
     </main>
+    <script src="dist/main.js"></script>
     <script>
         document.querySelector('#ham').addEventListener('click', mobileMenu)
         document.querySelector('.mob_menu .close').addEventListener('click', mobileMenu)
