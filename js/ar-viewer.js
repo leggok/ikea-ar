@@ -434,15 +434,15 @@ class ARViewer extends HTMLElement {
 
     qrGenerate(){
         // let cut = location.pathname.includes('demo/nike-ar/') ? location.pathname.replace('demo/nike-ar/', '') : location.pathname;
-        let cut = location.pathname.slice(window.location.pathname.lastIndexOf('/'), window.location.pathname.length);
+        let cut = location.href.slice(window.location.href.lastIndexOf('/'), -1);
         let item = cut === '' || cut === '/index.html' || cut === '/' ?  this.getAttribute('glb-src').slice(0, this.getAttribute('glb-src').indexOf('/')) : cut.replace('/','').replace('.html', '');
         let url = `${window.location.href.slice(0, window.location.href.lastIndexOf('/'))}/loaderAR.html`
-        url += `?${item}=true` 
+        url += `?${item}=true`
         console.log(url)
         let qrcode = new QRCode({ content: url, join: true });
         let svg = qrcode.svg();
         return svg;
-    } 
+    }
     
     webXR(){
         console.log('webXR');

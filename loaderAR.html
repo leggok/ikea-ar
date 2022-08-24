@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike. Just Do It. Nike.com</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        .wrapper{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .customButtonWrapper::before, .webxr_btn::before {
+            top: calc(50% - 130px);
+            left: calc(50% - 105px);
+            width: 200px;
+            height: 200px;
+        }
+        .customButtonWrapper{
+            width: initial;
+        }
+        .actBtn{
+            width: 230px;
+            height: 230px;
+        }
+        .wrapper .buy_btn{
+            display: none;
+            text-align: center;
+        }
+        .buy_btn a{
+            font-size: 20px;
+        }
+        .loading{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <ar-viewer 
+        GLB-src="https://ikea-ar-atlasiko.surge.sh/sophieArmchair/sophieArmchair.glb" 
+        USDZ-src="https://ikea-ar-atlasiko.surge.sh/sophieArmchair/sophieArmchair.usdz#&amp;customHeight=medium" 
+        custom-banner="https://ikea-ar-atlasiko.surge.sh/sophieArmchair/sophieArmchair/banner.html">
+    </ar-viewer>
+        <div class="loading">
+            <div>Loading...</div>
+            <div>Please wait</div>
+        </div>
+        
+        <div class="buy_btn">
+            <a href="/">Go Back</a>
+            <a href="https://atlasiko.com/express-contact-us.html?src=ar-demo-ikea">Get a quote for AR</a>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script type="module" src="dist/main.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
