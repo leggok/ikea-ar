@@ -120,7 +120,7 @@
                         </a>
                     </li>
                     <li>
-                        <div class="hamburger" id="ham">
+                        <div class="hamburger side_hamburger">
                             <svg focusable="false" class="svg-icon  hnf-svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 8H4V6h16v2zm0 5H4v-2h16v2zm0 5H4v-2h16v2z"></path></svg>
                         </div>
                     </li>
@@ -360,6 +360,8 @@
     </main>
     <script>
         document.querySelector('#ham').addEventListener('click', mobileMenu)
+        document.querySelector('.mob_menu .close').addEventListener('click', mobileMenu)
+        document.querySelector('.side_hamburger').addEventListener('click', mobileMenu)
         function mobileMenu(){
             document.querySelector('header').classList.toggle('open')
             document.querySelector('#ham').classList.toggle('is-active')

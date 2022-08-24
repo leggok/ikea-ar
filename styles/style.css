@@ -32,6 +32,9 @@ header{
     fill: #000;
 }
 
+header.open .shadow{
+    display: block;
+}
 .shadow{
     position: fixed;
     top: 0;
@@ -39,10 +42,14 @@ header{
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,.3);
+    display: none;
+}
+header.open .mob_menu{
+    display: block;
 }
 .mob_menu{
     position: fixed;
-    display: block; 
+    display: none; 
     overflow: auto;
     top: 0;
     left: 0;
